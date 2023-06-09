@@ -1,19 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NavBar from './components/NavBar.jsx';
-import Hero from './components/Hero.jsx';
-import NuestrosFavoritos from './components/NuestrosFavoritos.jsx';
-import Footer from './components/Footer.jsx'
+import App from './components/App'
 import reportWebVitals from './reportWebVitals';
 import './main.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NavBar />
-    <Hero />
-    <NuestrosFavoritos />
-    <Footer />
+    <App />
   </React.StrictMode>
 );
 

@@ -5,20 +5,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-.navbar-brand img{
-    height: 80px;
+.mensajePush{
+    
 }
-.navbar-nav{
-    transition: 2s;
-}
-
 /*---------BODY--------*/
 body{
     font-family: 'Sofia Sans', sans-serif;
     background-color: white;
 }
 .hero{
-    
     display: flex;
     position: relative;
     width: 100vw;

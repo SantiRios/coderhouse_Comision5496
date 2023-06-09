@@ -1,96 +1,39 @@
-import React, { useState } from "react";
+import React from 'react'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
-
-    const [isHover, setIsHover] = useState(false);
-
-    const handleMouseEnter = () =>{
-        setIsHover(true);
-        console.log("Enter");
-    };
-    const handleMouseOver = () =>{
-        setIsHover(false);
-    };
-    const [isShow, setIsShow] = useState(false);
     return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="../index.html">
-                    <h2 style={{
-                        fontSize: "50px",
-                        color: "black",
-                        textAlign: "center",
-                        fontFamily: "'Raleway', sans-serif",
-                        letterSpacing: "-10px"
-                    }}>MDF</h2>
-                </a>
-                <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                >
-                <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0" 
-                        style = {{transition: "2s"}}>
-                        <li className="nav-item">
-                            <div className="dropdown">
-                                <button
-                                    className="btn btn-secondary dropdown-toggle"
-                                    type="button"
-                                    id="dropdownMenuButton"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                    onClick={()=>setIsShow(!isShow)}
-                                >
-                                    CATEGORIAS
-                                </button>
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"
-                            style={{display : isShow? 'block' : 'none'}}>
-                                <a className="dropdown-item" href="../index.html">
-                                    MOCHILAS
-                                </a>
-                                <a className="dropdown-item" href="../index.html">
-                                    BOLSOS
-                                </a>
-                                <a className="dropdown-item" href="../index.html">
-                                    MORRALES
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="../index.html"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseOver}
-                        style={{
-                            backgroundColor : isHover ? 'rgb(149, 162, 167)': 'white',
-                        }}>
-                        NOSOTROS
-                        </a>
-                    </li>
-                        <li className="nav-item"
-                        >
-                            <a className="nav-link active" aria-current="page" href="../index.html"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseOver}
-                            style={{
-                                backgroundColor : isHover ? 'rgb(149, 162, 167)': 'white',
-                            }}>
-                            CONTACTO
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav>
+            <Navbar bg="light" expand="lg">
+            <Container>
+                <Navbar.Brand href="#home">MDF</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link href="#home">Inicio</Nav.Link>
+                    <Nav.Link href="#link">Mochilas</Nav.Link>
+                    <NavDropdown title="Categorias" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">Mochilas</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">
+                        Bolsos
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Morrales</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4">
+                        Accesorios
+                    </NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                <CartWidget />
+                </Navbar.Collapse>
+            </Container>
+            </Navbar>
         </nav>
-    );
-};
+    )
+}
 
-export default NavBar;
+export default NavBar
