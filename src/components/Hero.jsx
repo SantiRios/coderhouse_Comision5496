@@ -18,15 +18,13 @@ const hero = () => {
                 width: "100%",
                 alignItems: "center",
                 top: "50%",
-                left: "70vw"
+                left: "30vw"
             }}>
-                <a href="." target="_blank" style={{
+                <a href="/products" target="_blank" style={{
                     fontSize: "40px",
                     textDecoration: "none",
                     color: "black",
-                    backgroundColor: "burlywood",
                     padding: "8px 12px",
-                    border: "4px solid",
                     fontWeight: "bold",
                     marginTop: "10px"
                 }}>Compra ahora</a>

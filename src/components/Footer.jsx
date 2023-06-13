@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             <div>
                 <a href="./index.html">
-                <p>MDF</p>
+                <p className="navbar-brand">MDF</p>
                 </a>
             </div>
             <div>

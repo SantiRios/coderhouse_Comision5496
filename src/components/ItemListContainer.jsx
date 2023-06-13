@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Item from './Item/Item'
+import Item from './Item'
 import productsArr from '../api/productos.json'
 
 const ItemListContainer = ({greeting}) => {

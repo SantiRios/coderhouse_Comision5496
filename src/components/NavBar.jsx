@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <nav>
+        <div>
             <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="/">MDF</Navbar.Brand>
@@ -30,7 +30,7 @@ const NavBar = () => {
                 </Navbar.Collapse>
             </Container>
             </Navbar>
-        </nav>
+        </div>
     )
 }
 
