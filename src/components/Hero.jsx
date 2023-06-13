@@ -1,5 +1,4 @@
 import React from 'react'
-import heroImg from '../img/bannerHero.jpg'
 
 const hero = () => {
     return (
@@ -9,7 +8,7 @@ const hero = () => {
             width: "100vw",
             height: "500px"
         }}>
-            <img src={heroImg} alt="Compra ahora mochilas, valijas y accesorios" style={{
+            <img src="../img/bannerHero.jpg" alt="Compra ahora mochilas, valijas y accesorios" style={{
                 width: "100vw",
                 objectFit: "cover"
             }}></img>
