@@ -5,6 +5,8 @@ import Products from '../pages/Products'
 import ProductDetail from '../pages/ProductDetail';
 import Categories from '../pages/Categories';
 import CategoriesDetail from '../pages/CategoriesDetail';
+import Cart from '../pages/Cart';
+
 const MainRouter = () => {
     return (
         <BrowserRouter>
@@ -14,7 +16,7 @@ const MainRouter = () => {
                 <Route path="/products/:productId" element={<ProductDetail />}/>
                 <Route exact path="/categories" element={<Categories />}/>
                 <Route path="/categories/:categorie" element={<CategoriesDetail />}/>
-
+                <Route exact path="/cart" element={<Cart />}/>
             </Routes>
         </BrowserRouter>
     )

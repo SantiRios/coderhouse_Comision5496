@@ -1,10 +1,13 @@
 import React from 'react'
 import MainRouter from './routes/MainRouter';
+import { CartProvider } from './context/CartContext';
 
 const App = () => {
     return (
         <div> 
-            <MainRouter />
+            <CartProvider>
+                <MainRouter />
+            </CartProvider>
         </div>
     )
 }

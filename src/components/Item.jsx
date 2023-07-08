@@ -2,8 +2,8 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import CartButtons from './CartButtons';
 
 const Item = ({productsData}) => {
     
@@ -18,7 +18,8 @@ const Item = ({productsData}) => {
                 <Card.Text>
                 {p.precio}
                 </Card.Text>
-                <Button variant="primary"><Link to ={`/products/${p.id-1}`}>Comprar</Link></Button>
+                <CartButtons productId={p.id} />
+                <Link to ={`/products/${p.id}`}>Ir al detalle</Link>
             </Card.Body>
             </Card>
             </Col>

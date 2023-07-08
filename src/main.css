@@ -117,3 +117,9 @@ footer div:nth-child(2) a img {
     text-transform: uppercase;
     font-size: 40px;
 }
+.contenedorAdd{
+    justify-content: space-around;
+}
+.spanCart{
+    margin: 10px;
+}
